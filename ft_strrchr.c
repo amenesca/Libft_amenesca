@@ -6,7 +6,7 @@
 /*   By: amenesca <amenesca@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 08:20:41 by amenesca          #+#    #+#             */
-/*   Updated: 2022/05/21 15:04:41 by amenesca         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:45:04 by amenesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ char	*ft_strrchr(const char *s, int c)
 	char	*temp;
 	char	*str;
 	size_t	i;
+	size_t	len;
 
+	len = ft_strlen(s);
 	str = (char *) s;
 	i = 0;
 	temp = NULL;
-	while (i <= ft_strlen(str))
+	if (c == '\0')
+		return ((char *) s + len);
+	while (i < ft_strlen(str))
 	{
 		if (str[i] == (char) c)
 			temp = str + i;

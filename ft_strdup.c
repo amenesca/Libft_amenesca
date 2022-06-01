@@ -6,7 +6,7 @@
 /*   By: amenesca <amenesca@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 13:32:05 by amenesca          #+#    #+#             */
-/*   Updated: 2022/05/21 15:34:15 by amenesca         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:44:20 by amenesca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*s;
 
 	s = (char *) malloc((ft_strlen(s1) + 1) * sizeof(char));
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (i <= ft_strlen(s1))
 	{
