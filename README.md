@@ -1,3 +1,3 @@
 # libft_amenesca
 
-A implementation library of useful functions of C standard library, made for study reasons.
+A reimplementation of a C standard libbrary, made for study reasons.
